@@ -4,7 +4,7 @@ const app = {
     port: 51461,
     name: "server",
     username: "admin",
-    password: "qwerty9999"
+    password: "a12345677"
   },
   jwt: {
     APP_SECRET: "HATEYOU",
