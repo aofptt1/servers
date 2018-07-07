@@ -7,6 +7,7 @@ import passport from "./app/passport";
 
 //run db connect
 import "./app/core/connect";
+import Message from "./app/schema/Message"
 
 const app = express();
 app.use(express.json());
@@ -25,6 +26,10 @@ app.get("/", (req, res) => {
     author: "Bundit Nuntates",
     version: "0.1-beta"
   });
+});
+app.get("/messages",async(req,res)=>{
+  let message = Message.find({});
+  res.json(message);
 });
 
 const port = process.env.PORT || 8080;
